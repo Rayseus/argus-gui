@@ -1,0 +1,1 @@
+var app=angular.module('argus', ['ui.bootstrap', 'ui.router','restangular', 'ngDialog','ngCookies','ngSanitize','smart-table','ui.select']);

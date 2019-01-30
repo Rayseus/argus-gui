@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh" ng-app="argus">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Project Argus - MTL </title>
+  <!-- STYLES -->
+  <!-- build:css lib/css/main.min.css -->
+  <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="components/rdash-ui/dist/css/rdash.min.css">
+  <link rel="stylesheet" type="text/css" href="components/angular-ui-select/dist/select.min.css">
+  <link rel="stylesheet" type="text/css" href="components/ng-dialog/css/ngDialog.min.css">
+
+  <link rel="stylesheet" type="text/css" href="less/customer.css">
+ 
+  <!-- endbuild -->
+  <!-- SCRIPTS -->
+  <!-- build:js lib/js/main.min.js -->
+  <script type="text/javascript" src="components/angular/angular.min.js"></script>
+
+  <script type="text/javascript" src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script> 
+  <script type="text/javascript" src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
+   <script type="text/javascript" src="components/angular-cookies/angular-cookies.min.js"></script>
+<script type="text/javascript" src="components/angular-ui-select/dist/select.min.js"></script>
+  <script type="text/javascript" src="components/angular-smart-table/dist/smart-table.min.js"></script>
+  <!-- 
+  <script type="text/javascript" src="components/angular-resource/angular-resource.min.js"></script>  -->
+  <script type="text/javascript" src="components/ng-dialog/js/ngDialog.min.js"></script>
+    <script type="text/javascript" src="components/lodash/dist/lodash.min.js"></script>
+  <script type="text/javascript" src="components/restangular/dist/restangular.min.js"></script>
+  <script type="text/javascript" src="components/angular-sanitize/angular-sanitize.min.js"></script>
+  
+  
+  <!-- endbuild -->
+  <!-- Custom Scripts -->
+  <script type="text/javascript" src="js/dashboard.min.js"></script>
+</head>
+<body ng-controller="MasterCtrl">
+  <div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar"> 
+        <li class="sidebar-main">
+          <a ng-click="toggleSidebar()" class="navbar-brand" >            
+            <img alt="Project Argus" style="max-width:100px;margin-top:-7px;" src="img/logo.png">
+            <span class="menu-icon glyphicon glyphicon-transfer"></span>
+          </a>
+        </li>
+        <li class="sidebar-title"><span>Menu</span></li>
+        <li class="sidebar-list">
+          <a href="#">Home <span class="menu-icon fa fa-tachometer"></span></a>
+        </li>
+        <li class="sidebar-list">
+          <a href="#/search">Search <span class="menu-icon fa fa-table"></span></a>
+        </li>
+        <li class="sidebar-list">
+          <a href="#/create">Create <span class="menu-icon fa fa-table"></span></a>
+        </li>   
+      </ul>
+    </div>
+    <!-- End Sidebar -->
+
+    <div id="content-wrapper">
+      <div class="page-content">
+
+        <!-- Header Bar -->
+        <div class="row header">
+          <div class="col-xs-12">
+           
+            </div>
+            <div class="meta">
+              <div class="page">
+                主页
+              </div>         
+            </div>         
+        </div>
+        <!-- End Header Bar -->
+
+        <!-- Main Content -->
+        <div ui-view></div>
+
+      </div><!-- End Page Content -->
+    </div><!-- End Content Wrapper -->
+  </div><!-- End Page Wrapper -->
+</body>
+</html>
