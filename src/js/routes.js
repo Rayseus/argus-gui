@@ -6,7 +6,7 @@
 angular.module('argus').
     run(['Restangular',function(Restangular) {
         //BaseUrlCalculator.calculate()
-        Restangular.setBaseUrl('http://localhost:9000/');
+        // Restangular.setBaseUrl('http://localhost:9000/');
     }]
 ).config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $urlRouterProvider) {
  

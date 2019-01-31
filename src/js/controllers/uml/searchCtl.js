@@ -56,7 +56,7 @@ angular.module('argus').controller('searchCtrl', [ '$scope','$location','$interv
 			$scope.query = function() {
 				console.dir("try to get all info");
 				$scope.results = Restangular.all('s').getList().$object;
-				console.dir($scope.ressults);
+				console.dir($scope);
 				$scope.initialized=true;
             };  
             
