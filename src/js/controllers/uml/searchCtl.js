@@ -32,7 +32,7 @@ angular.module('argus').controller('searchCtrl', [ '$scope','$location','$interv
 				console.dir("try to get order info");
 				$scope.projectName=row.project;
 				if(row.path==undefined){					
-					Restangular.one('draw/png/'+row.id).get().then(function(data){
+					Restangular.one('http://localhost:9000/draw/png/'+row.id).get().then(function(data){
 						$scope.thumb = data;						
 						ngDialog.open({
 							template : 'templates/search/view.html',

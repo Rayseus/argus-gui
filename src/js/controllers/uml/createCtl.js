@@ -3,7 +3,8 @@ angular.module('argus').controller('createCtrl', [ '$scope','$location','$interv
 			
 			$scope.create = function() {				
 				console.dir("try to save data "+$scope.code);
-				var png=Restangular.all("/draw/png");
+				console.log('data: ', $scope)
+				var png=Restangular.all("http://localhost:9000/draw/png");
 				var postdata={project:$scope.project,saml:$scope.saml,team:$scope.team};
 				png.post(postdata).then(function(data){
 					$scope.thumb = data;				
